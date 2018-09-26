@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Portal JPM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../logo.ico">
+
+
+  <link rel="stylesheet" href="./login.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="banner-outter">
+    <div class="nav" id="nav">
+      <div>
+        <img id="icon-logo" class="nav-item" src="../logojpm.png">
+        <span id="title" class="nav-item">PORTAL JPM</span>
+      </div>
+      <a class="nav-bars" onclick="toggle_sidebar()">
+        <i class="fas fa-bars" style="color: white"></i>
+      </a>
+      <div id="nav-links">
+        <a class="nav-link nav-item" href="#">Ajuda</a>
+        <a class="nav-link nav-item" href="#">Contactos</a>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+    <nav class="sidebar" id="sidebar">
+      <a class="nav-bars angle-left" onclick="toggle_sidebar()">
+        <i class="fas fa-angle-left"></i>
+      </a>
+      <h2 class="sidebar-title"><b>Menu</b></h2>
+      <a class="sidebar-item " href="#">Ajuda</a>
+      <a class="sidebar-item " href="#">Contactos</a>
+
+    </nav>
+    <div class="overlay" onclick="toggle_sidebar()" title="close side menu" id="overlay"></div>
+    <div id="dashboard">
+      <div class="login-banner">
+        <div class="logo">
+          <img id="center-logo" src="../logojpm.png " alt=" ">
+        </div>
+
+        <div class="login-form ">
+          <form>
+            <input class="inp " type="number" placeholder="NIF da Escola ">
+            <input class="inp " type="number" placeholder="NIF do Utilizador ">
+            <input class="inp " type="text " placeholder="Codigo de Acesso ">
+            <br>
+            <button type="submit" class="btn esc">Escolas</button>
+            <button type="submit" class="btn pess">Pessoal</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./login.js"></script>
+</body>
+
+</html>

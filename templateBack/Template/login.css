@@ -1,0 +1,246 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url("../quadrados_logotipo_jpm.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-width: 320px;
+  background-color: #f9f9f9;
+  margin: 0;
+  height: 100%;
+}
+
+.nav {
+  background-color: #655BEA;
+  width: 100%;
+  text-align: right;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.nav-link {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  --margin-right: 7px;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  background-color: #FFCB1E;
+  border-color: #FFCB1E;
+}
+
+.nav-bars {
+  font-size: 17.5px;
+  display: none;
+  background-color: #655BEA;
+  border: solid;
+  border-color: #655BEA;
+  border-width: 3px;
+  padding: 10px 12.8px;
+}
+
+.nav-bars:hover {
+  background-color: #FFCB1E;
+  border-color: #FFCB1E;
+}
+
+.angle-left {
+  float: right;
+  font-size: 22px;
+  padding: 10px 18px;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+.login-banner {
+  width: 70%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 125px;
+  padding-bottom: 10px;
+}
+
+.logo {
+  width: 50%;
+  display: table;
+  margin: 0 auto;
+}
+
+.login-form {
+  margin-top: 25px;
+  margin: 0 auto;
+  max-width: 450px;
+}
+
+.inp {
+  padding: 10px;
+  margin: 5px 0 5px 0;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+}
+
+.btn {
+  margin: 5px 0 5px 0;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  border: solid;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.esc {
+  background-color: #655BEA;
+  border-color: #655BEA;
+}
+
+.esc:hover {
+  box-shadow: 0px 0px 10px #655BEA;
+}
+
+.pess {
+  background-color: #FFCB1E;
+  border-color: #FFCB1E;
+}
+
+.pess:hover {
+  box-shadow: 0px 0px 10px #FFCB1E;
+}
+
+#sidebar {
+  z-index: 3;
+  width: 250px;
+  bottom: 0;
+  left: -250px;
+  height: inherit;
+  background-color: #655BEA;
+  position: fixed;
+  color: white;
+}
+
+#sidebar.on {
+  -webkit-animation: slideIn 0.4s ease-in-out both;
+  animation: slideIn 0.4s ease-in-out both;
+}
+
+#sidebar.off {
+  -webkit-animation: slideOut 0.4s ease-in-out both;
+  animation: slideOut 0.4s ease-in-out both;
+}
+
+@keyframes slideIn {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes slideOut {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+.sidebar-item {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.sidebar-item:hover {
+  background-color: #FFCB1E;
+  border-color: #FFCB1E;
+}
+
+.sidebar-title {
+  margin-top: 11px;
+  padding-left: 10px;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#title {
+  float: left;
+  font-size: 22px;
+  color: white;
+  padding-left: 20px;
+}
+
+#center-logo {
+  width: 300px;
+  height: auto;
+}
+
+#icon-logo {
+  height: 23px;
+  width: auto;
+  float: left;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: "Roboto", sans-serif;
+}
+
+@media (min-width: 801px) {
+  #sidebar {
+    display: none !important;
+  }
+
+  .overlay {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .login-banner {
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  #nav-links {
+    display: none;
+  }
+
+  .nav-bars {
+    display: inline-block;
+  }
+
+  #dashboard {
+    margin-left: 0;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

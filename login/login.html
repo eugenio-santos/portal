@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Portal 2 JPM</title>
+  <meta charset="windows-1252">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../logo.ico">
+
+  <link rel="stylesheet" href="./login.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <div>
+    <div class="nav" id="nav">
+      <div>
+        <img id="icon-logo" class="nav-item" src="../../logojpm.png">
+        <span id="title" class="nav-item">PORTAL JPM</span>
+      </div>
+      <a class="nav-bars" onclick="toggle_sidebar()">
+        <i class="fas fa-bars" style="color: white"></i>
+      </a>
+      <div id="nav-links">
+        <a class="nav-link nav-item" href="#">Ajuda</a>
+        <a class="nav-link nav-item" href="#">Contactos</a>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+    <nav class="sidebar" id="sidebar">
+      <a class="nav-bars angle-left" onclick="toggle_sidebar()">
+        <i class="fas fa-angle-left"></i>
+      </a>
+      <h2 class="sidebar-title"><b>Menu</b></h2>
+      <a class="sidebar-item" href="#">Ajuda</a>
+      <a class="sidebar-item" href="#">Contactos</a>
+    </nav>
+    <div class="overlay" onclick="toggle_sidebar()" title="close side menu" id="overlay"></div>
+    <div id="dashboard">
+      <div class="login-banner">
+        <div class="logo">
+          <img id="center-logo" src="../../logojpm.png " alt=" ">
+        </div>
+        <div class="login-form">
+          <div id="find-escola">
+            <select id="distritos" class="input">
+              <option id="00">--</option>
+              <option id="01"> Aveiro </option>
+              <option id="02"> Beja </option>
+              <option id="03"> Braga </option>
+              <option id="04"> Bragança </option>
+              <option id="05"> Castelo Branco </option>
+              <option id="06"> Coimbra </option>
+              <option id="07"> Évora </option>
+              <option id="08"> Faro </option>
+              <option id="09"> Guarda </option>
+              <option id="10"> Leiria </option>
+              <option id="11"> Lisboa </option>
+              <option id="12"> Portalegre </option>
+              <option id="13"> Porto </option>
+              <option id="14"> Santarém </option>
+              <option id="15"> Setúbal </option>
+              <option id="16"> Viana do Castelo </option>
+              <option id="17"> Vila Real </option>
+              <option id="18"> Viseu </option>
+            </select>
+            <select id="esoclas" class="input" size="10">
+              <option id="01"> Aveiro </option>
+              <option id="02"> Beja </option>
+              <option id="03"> Braga </option>
+              <option id="04"> Bragança </option>
+              <option id="05"> Castelo Branco </option>
+              <option id="06"> Coimbra </option>
+              <option id="07"> Évora </option>
+              <option id="08"> Faro </option>
+              <option id="09"> Guarda </option>
+              <option id="10"> Leiria </option>
+              <option id="11"> Lisboa </option>
+              <option id="12"> Portalegre </option>
+              <option id="13"> Porto </option>
+              <option id="14"> Santarém </option>
+              <option id="15"> Setúbal </option>
+              <option id="16"> Viana do Castelo </option>
+              <option id="17"> Vila Real </option>
+              <option id="18"> Viseu </option>
+            </select>
+          </div>
+          <div id="login-buttons">
+            <button class=" dropdown-btn btn btn-escola" id="Escolas" onclick="OpenDropdown(this)">Escolas</button>
+            <button class="dropdown-btn btn btn-pessoa" id="Pessoal" onclick="OpenDropdown(this)">Pessoal</button>
+          </div>
+          <div class="dropdown-container" id="dropdown-form">
+            <form>
+              <label id="form-lable">Escolas</label>
+              <input class="input" type="number" placeholder="NIF da Escola ">
+              <input class="input" type="number" placeholder="NIF do Utilizador ">
+              <input class="input" type="text" placeholder="Codigo de Acesso ">
+              <button type="button" class="btn btn-cancelar " onclick="CloseDropdown(this) ">Cancelar</button>
+              <button type="submit" class="btn btn-entrar ">Entrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./login.js "></script>
+</body>
+
+</html>
