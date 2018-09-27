@@ -49,8 +49,6 @@ function OpenDropdown(el) {
     userPess.style.display = "block";
   }
   ElById("dropdown-form").style.display = "block";
-  console.log(searchEscola.value);
-
   ElById("form-lable").textContent = escolas.value + " - " + distritos.value;
 
   ElById("select-escola").classList.remove('login-btn-on');
@@ -73,7 +71,6 @@ distritos.onchange = function (ev) {
 }
 
 escolas.onchange = function (ev) {
-  console.log('change');
   loginBtns.style.maxHeight = "500px";
 }
 
