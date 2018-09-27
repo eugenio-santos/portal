@@ -1,7 +1,11 @@
 // Get the Sidebar
-var sidebar = document.getElementById("sidebar");
-var overlayBg = document.getElementById("overlay");
-
+var ElById = document.getElementById.bind(document);
+var sidebar = ElById("sidebar");
+var overlayBg = ElById("overlay");
+var distritos = ElById('distritos');
+var divFindEscolas = ElById('find-escola');
+var searchEscola = ElById('search-escola');
+var escolas = ElById('sel-escola');
 
 // Toggle between showing and hiding the sidebar, and add overlay effect
 function toggle_sidebar() {
@@ -25,28 +29,46 @@ function removeAnimationClasses(mediaQuery) {
     sidebar.classList.remove('on');
     overlayBg.style.display = "none";
   } else {
-    var navHeight = document.getElementById("nav").clientHeight;
+    var navHeight = ElById("nav").clientHeight;
     sidebar.style.top = navHeight + 'px';
     overlayBg.style.top = navHeight + 'px';
   }
 }
 
 function OpenDropdown(el) {
-  document.getElementById("dropdown-form").style.display = "block";
-  document.getElementById("form-lable").textContent = el.innerText + ":";
+  /*ElById("login-buttons").style.maxHeight = null;
+  ElById('dropdown-form').style.maxHeight = "500px";*/
+  ElById("dropdown-form").style.display = "block";
+  ElById("form-lable").textContent = el.innerText + ":";
 
-  document.getElementById("login-buttons").classList.remove('login-btn-on');
-  document.getElementById("login-buttons").classList.add('login-btn-off');
+  ElById("select-escola").classList.remove('login-btn-on');
+  ElById("select-escola").classList.add('login-btn-off');
 
-  document.getElementById("dropdown-form").classList.remove('login-form-off');
-  document.getElementById("dropdown-form").classList.add('login-form-on');
+  ElById("dropdown-form").classList.remove('login-form-off');
+  ElById("dropdown-form").classList.add('login-form-on');
 }
 
 function CloseDropdown(el) {
-  document.getElementById("login-buttons").classList.remove('login-btn-off');
-  document.getElementById("login-buttons").classList.add('login-btn-on');
+  /*ElById("login-buttons").style.maxHeight = "500px";
+  ElById('dropdown-form').style.maxHeight = null;*/
+  ElById("select-escola").classList.remove('login-btn-off');
+  ElById("select-escola").classList.add('login-btn-on');
 
-  document.getElementById("dropdown-form").classList.remove('login-form-on');
-  document.getElementById("dropdown-form").classList.add('login-form-off');
+  ElById("dropdown-form").classList.remove('login-form-on');
+  ElById("dropdown-form").classList.add('login-form-off');
+}
+
+distritos.onchange = function (ev) {
+  console.log("change");
+  if (divFindEscolas.style.maxHeight) {
+    divFindEscolas.style.maxHeight = null;
+  } else {
+
+    divFindEscolas.style.maxHeight = "500px";
+  }
+}
+
+escolas.onchange = function (ev) {
+  ElById("login-buttons").style.maxHeight = "500px";
 }
 

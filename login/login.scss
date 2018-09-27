@@ -66,7 +66,7 @@ body {
   width: 70%;
   max-width: 600px;
   margin: 0 auto;
-  padding-top: 125px;
+  padding-top: 100px;
   padding-bottom: 10px;
 }
 
@@ -96,12 +96,21 @@ body {
 
 .dropdown-container {
   display: none;
+  /*max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.5s ease-out;*/
 }
 
 .btn-entrar {
   background-color: $primary-color;
   border-color: $primary-color;
   margin-left: 0.5%;
+}
+
+#login-buttons {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.5s ease-out;
 }
 
 .login-btn-on {
@@ -133,8 +142,12 @@ body {
 }
 
 .login-form-on {
-  animation-duration: 1s;
-  animation: loginFormOn .5s ease-in-out both;
+  /*animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: both;*/
+  height: 0;
+  animation: loginFormOn 500ms ease-in-out 500ms 1 normal both running; //animation: loginFormOn .5s ease-in-out both;
 }
 
 @keyframes loginFormOn {
@@ -178,6 +191,7 @@ body {
   border-radius: 5px;
   border: 1px solid lightgray;
   box-sizing: border-box;
+  outline-width: 0;
 }
 
 .btn-escola {
@@ -299,6 +313,12 @@ body {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom: 0;
+}
+
+#find-escola {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.5s ease-out;
 }
 
 html,
