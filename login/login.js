@@ -81,5 +81,10 @@ searchEscola.onkeyup = function (ev) {
       escolas.options[i].style.display = "block" :
       escolas.options[i].style.display = "none"
   }
+  if (ev.keyCode == 13) {
+    console.log(ev);
+    this.blur()
+  }
+
 }
 

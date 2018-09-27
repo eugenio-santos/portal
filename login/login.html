@@ -48,9 +48,31 @@
         <div class="login-form">
           <div id="select-escola">
             <label>Distrito:</label>
-            <form>
-              <select id="distritos" class="input">
-                <option id="00">--</option>
+            <select id="distritos" class="input">
+              <option id="00">--</option>
+              <option id="01"> Aveiro </option>
+              <option id="02"> Beja </option>
+              <option id="03"> Braga </option>
+              <option id="04"> Bragança </option>
+              <option id="05"> Castelo Branco </option>
+              <option id="06"> Coimbra </option>
+              <option id="07"> Évora </option>
+              <option id="08"> Faro </option>
+              <option id="09"> Guarda </option>
+              <option id="10"> Leiria </option>
+              <option id="11"> Lisboa </option>
+              <option id="12"> Portalegre </option>
+              <option id="13"> Porto </option>
+              <option id="14"> Santarém </option>
+              <option id="15"> Setúbal </option>
+              <option id="16"> Viana do Castelo </option>
+              <option id="17"> Vila Real </option>
+              <option id="18"> Viseu </option>
+            </select>
+            <div id="find-escola">
+              <label>Escola:</label>
+              <input id="search-escola" type="text" placeholder="Pesquisa Escola" class="input">
+              <select id="sel-escola" class="input" size="8">
                 <option id="01"> Aveiro </option>
                 <option id="02"> Beja </option>
                 <option id="03"> Braga </option>
@@ -70,31 +92,7 @@
                 <option id="17"> Vila Real </option>
                 <option id="18"> Viseu </option>
               </select>
-              <div id="find-escola">
-                <label>Escola:</label>
-                <input id="search-escola" type="text" placeholder="Pesquisa Escola" class="input">
-                <select id="sel-escola" class="input" size="8">
-                  <option id="01"> Aveiro </option>
-                  <option id="02"> Beja </option>
-                  <option id="03"> Braga </option>
-                  <option id="04"> Bragança </option>
-                  <option id="05"> Castelo Branco </option>
-                  <option id="06"> Coimbra </option>
-                  <option id="07"> Évora </option>
-                  <option id="08"> Faro </option>
-                  <option id="09"> Guarda </option>
-                  <option id="10"> Leiria </option>
-                  <option id="11"> Lisboa </option>
-                  <option id="12"> Portalegre </option>
-                  <option id="13"> Porto </option>
-                  <option id="14"> Santarém </option>
-                  <option id="15"> Setúbal </option>
-                  <option id="16"> Viana do Castelo </option>
-                  <option id="17"> Vila Real </option>
-                  <option id="18"> Viseu </option>
-                </select>
-              </div>
-            </form>
+            </div>
             <div id="login-buttons">
               <button class=" dropdown-btn btn btn-escola" id="Escolas" onclick="OpenDropdown(this)">Escolas</button>
               <button class="dropdown-btn btn btn-pessoa" id="Pessoal" onclick="OpenDropdown(this)">Pessoal</button>
