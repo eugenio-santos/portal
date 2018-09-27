@@ -10,6 +10,7 @@ var escolas = ElById('sel-escola');
 var loginBtns = ElById("login-buttons");
 var userEscola = ElById('user-escola');
 var userPess = ElById('user-pess');
+var noMatches = ElById('no-matches')
 
 // Toggle between showing and hiding the sidebar, and add overlay effect
 function toggle_sidebar() {
@@ -40,7 +41,6 @@ function removeAnimationClasses(mediaQuery) {
 }
 
 function OpenDropdown(el) {
-  console.log(el.id);
   if (el.id === "Escolas") {
     userEscola.style.display = "block";
     userPess.style.display = "none";
@@ -81,10 +81,15 @@ searchEscola.onkeyup = function (ev) {
       escolas.options[i].style.display = "block" :
       escolas.options[i].style.display = "none"
   }
-  if (ev.keyCode == 13) {
-    console.log(ev);
-    this.blur()
+  console.log();
+  if (escolas.querySelector('option[style="display: block;"]')) {
+    noMatches.style.display = "none";
+  } else {
+    noMatches.style.display = "block";
   }
 
+  if (ev.keyCode == 13) {
+    this.blur()
+  }
 }
 
