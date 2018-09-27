@@ -93,9 +93,6 @@ body {
 
 .dropdown-container {
   display: none;
-  /*max-height: 0;
-  overflow: hidden;
-  transition: max-height 1.5s ease-out;*/
 }
 
 .btn-entrar {
@@ -107,7 +104,7 @@ body {
 #login-buttons {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1.5s ease-out;
+  transition: max-height 1.5s linear;
 }
 
 .login-btn-on {

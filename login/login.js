@@ -1,11 +1,15 @@
 // Get the Sidebar
 var ElById = document.getElementById.bind(document);
+
 var sidebar = ElById("sidebar");
 var overlayBg = ElById("overlay");
 var distritos = ElById('distritos');
 var divFindEscolas = ElById('find-escola');
 var searchEscola = ElById('search-escola');
 var escolas = ElById('sel-escola');
+var loginBtns = ElById("login-buttons");
+var userEscola = ElById('user-escola');
+var userPess = ElById('user-pess');
 
 // Toggle between showing and hiding the sidebar, and add overlay effect
 function toggle_sidebar() {
@@ -36,10 +40,18 @@ function removeAnimationClasses(mediaQuery) {
 }
 
 function OpenDropdown(el) {
-  /*ElById("login-buttons").style.maxHeight = null;
-  ElById('dropdown-form').style.maxHeight = "500px";*/
+  console.log(el.id);
+  if (el.id === "Escolas") {
+    userEscola.style.display = "block";
+    userPess.style.display = "none";
+  } else {
+    userEscola.style.display = "none";
+    userPess.style.display = "block";
+  }
   ElById("dropdown-form").style.display = "block";
-  ElById("form-lable").textContent = el.innerText + ":";
+  console.log(searchEscola.value);
+
+  ElById("form-lable").textContent = escolas.value + " - " + distritos.value;
 
   ElById("select-escola").classList.remove('login-btn-on');
   ElById("select-escola").classList.add('login-btn-off');
@@ -49,8 +61,6 @@ function OpenDropdown(el) {
 }
 
 function CloseDropdown(el) {
-  /*ElById("login-buttons").style.maxHeight = "500px";
-  ElById('dropdown-form').style.maxHeight = null;*/
   ElById("select-escola").classList.remove('login-btn-off');
   ElById("select-escola").classList.add('login-btn-on');
 
@@ -59,16 +69,20 @@ function CloseDropdown(el) {
 }
 
 distritos.onchange = function (ev) {
-  console.log("change");
-  if (divFindEscolas.style.maxHeight) {
-    divFindEscolas.style.maxHeight = null;
-  } else {
-
-    divFindEscolas.style.maxHeight = "500px";
-  }
+  divFindEscolas.style.maxHeight = "500px";
 }
 
 escolas.onchange = function (ev) {
-  ElById("login-buttons").style.maxHeight = "500px";
+  console.log('change');
+  loginBtns.style.maxHeight = "500px";
+}
+
+searchEscola.onkeyup = function (ev) {
+  var keyword = this.value.toLowerCase();
+  for (let i = 0; i < escolas.length; i++) {
+    escolas.options[i].text.toLowerCase().includes(keyword) ?
+      escolas.options[i].style.display = "block" :
+      escolas.options[i].style.display = "none"
+  }
 }
 
